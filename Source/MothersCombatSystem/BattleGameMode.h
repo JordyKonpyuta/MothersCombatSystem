@@ -18,12 +18,19 @@ class MOTHERSCOMBATSYSTEM_API ABattleGameMode : public AGameModeBase
 
 	public:
 	
-	UPROPERTY(EditAnywhere)
-	TArray<APlayerTeam*> Players;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BattleGameMode")
+	TArray<APlayerTeam*> Players = {nullptr, nullptr, nullptr};
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BattleGameMode")
 	TArray<AEnnemy*> Ennemies;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BattleGameMode")
 	TArray<FMCS_Items> Inventory;
+
+protected:
+	virtual void BeginPlay() override;
+
+public:
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "Battle")
+	void InitEnnemies();
 };

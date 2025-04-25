@@ -54,6 +54,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable)
+	void InitPlayer();
+
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void SetHealth();
 

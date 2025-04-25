@@ -15,6 +15,28 @@ AEnnemy::AEnnemy()
 void AEnnemy::BeginPlay()
 {
 	Super::BeginPlay();
+
+	switch (EnnemyType)
+	{
+	case EEnnemies::AngryBird:
+		break;
+	case EEnnemies::VeryAngryBird:
+		break;
+	case EEnnemies::ChuppaKid:
+		break;
+	case EEnnemies::ChuppaMecha:
+		break;
+	case EEnnemies::Popo:
+		break;
+	case EEnnemies::FlyingPopo:
+		break;
+	case EEnnemies::MisterPopo:
+		break;
+	case EEnnemies::HauntedPaladinArmour:
+		break;
+	case EEnnemies::HauntedWarriorArmour:
+		break;
+	}
 	
 }
 
